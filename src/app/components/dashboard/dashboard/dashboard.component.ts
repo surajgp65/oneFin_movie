@@ -29,7 +29,7 @@ export class DashboardComponent implements OnInit {
 
   onSubmit() {
     try {
-      this.isDisabled = true;
+      // this.isDisabled = true;
       this.http
         .request('post', 'usermodule/login/', this.loginForm.value)
         .subscribe((response: any) => {
