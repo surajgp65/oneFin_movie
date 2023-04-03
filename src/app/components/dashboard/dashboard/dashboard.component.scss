@@ -1,0 +1,70 @@
+.login-btn {
+  border: 2px solid #ebeef3;
+  border-radius: 10px;
+  padding: 15px 20px;
+  width: 100%;
+}
+.border-before {
+  position: relative;
+}
+.border-before::after {
+  border: 1px solid #ebeef3;
+  content: "";
+  position: absolute;
+  width: 30%;
+  top: 50%;
+  right: 0;
+}
+.border-before::before {
+  border: 1px solid #ebeef3;
+  content: "";
+  position: absolute;
+  width: 30%;
+  top: 50%;
+  left: 0;
+}
+.content-image {
+  background: url("../../../../assets/images/loginImg.svg");
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.form-icon {
+  position: absolute;
+  top: 25%;
+  height: 1.6rem;
+  width: 1.6rem;
+  left: 3%;
+}
+.form-icon-staus {
+  position: absolute;
+  top: 25%;
+  height: 1.5rem;
+  width: 1.5rem;
+  right: 3%;
+}
+.login-title h4 {
+  font-size: 1.55rem;
+}
+.login-title h6 {
+  color: #727272;
+}
+.error-msg {
+  position: absolute;
+  bottom: -1.3rem;
+  left: 0.8rem;
+}
+.h-blank {
+  height: 3.5em;
+}
+
+.login_form {
+  width: 75%;
+}
+
+@media (max-width: 768px) {
+  .login_form {
+    width: 100%;
+  }
+}

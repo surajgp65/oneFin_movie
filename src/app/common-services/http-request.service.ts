@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
+import { environment } from 'src/environments/environment';
 import { APIResponse } from '../models/api-model';
 
 @Injectable({
@@ -8,7 +9,7 @@ import { APIResponse } from '../models/api-model';
 })
 export class HttpRequestService {
   constructor(private http: HttpClient) {}
-  baseURL = 'http://localhost:3000/';
+  baseURL = environment.baseUrl;
   // function for CRUD
   request(
     requestType: string,

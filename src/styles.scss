@@ -35,7 +35,7 @@
   --text-cust-green: #00836c;
 }
 body {
-  background-color: #090c28;
+  // background-color: #090c28;
 
   &::-webkit-scrollbar {
     width: 5px;
@@ -50,6 +50,20 @@ body {
   &::-webkit-scrollbar-thumb:hover {
     background: #555;
   }
+}
+
+body.dark-mode {
+  background-color: #090c28;
+  color: #dfe6e9;
+
+  .modal-header {
+    color: black !important;
+  }
+}
+
+body.light-mode {
+  background-color: white;
+  color: #2d3436;
 }
 
 .fs-10 {
@@ -227,26 +241,12 @@ body {
   font-size: 20px;
   font-weight: 500;
   color: #00836c;
-  background: white;
-  border: 3px solid;
+  // background: white;
 }
 
-.otp-input {
-  width: 50px;
-  height: 50px;
-  border: none !important;
-  border-radius: 0px !important;
-  border-bottom: solid 1px #c5c5c5 !important;
-  text-align: center;
-  font-size: 32px;
-  background: transparent !important;
-}
-
-.mobile-input {
-  width: 1.2rem;
-  position: absolute;
-  margin: 0.5rem;
-  right: 15px;
-  top: 28px;
-  cursor: pointer;
+//** Width loop /
+@for $i from 1 through 100 {
+  .w-#{$i} {
+    width: $i * 1% !important;
+  }
 }
