@@ -1,0 +1,252 @@
+/* You can add global styles to this file, and also import other style files */
+/* You can add global styles to this file, and also import other style files */
+
+// regular style toast
+
+// @use "@angular/material" as mat;
+
+// @include mat.core();
+
+:root {
+  --main-color: #ee9c6a;
+  --color-dark: #1d232b;
+  --text-gray: #8390a2;
+  --color-secondary: #272727;
+  --bg-main: #f9f9f9;
+  --bg-orange: #fefaf7;
+  --bg-faint-orange: #fff7f2;
+  --color-title: #c7beb4;
+  --font-bold: "Avant Garde Demi BT";
+  --font-normal: "Avant Garde Book BT";
+  --color-green: #44bf1f;
+  --bg-orange-dark: #ff9d6c;
+  --border-color: #e0e0e1;
+  --color-light-gray: #c8beb3;
+  --color-danger: #e85656;
+  --color-warning: #ffbe43;
+  --color-faintblack: #646464;
+  --bg-gray: #efefef;
+  --bg-darkgray: #f5f5f5;
+  --color-faint-orange: #ff975f;
+  --color-faint-gray: #c8beb3;
+  --color-black: #262627;
+  --text-secondary: #202225;
+  --label-color-light: #7a8081;
+  --text-cust-green: #00836c;
+}
+body {
+  background-color: #090c28;
+
+  &::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+  }
+  &::-webkit-scrollbar-track {
+    background: #fff;
+  }
+  &::-webkit-scrollbar-thumb {
+    background: #888;
+  }
+  &::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
+}
+
+.fs-10 {
+  font-size: 0.44rem !important;
+}
+.fs-11 {
+  font-size: 0.49rem !important;
+}
+.fs-12 {
+  font-size: 0.53rem !important;
+}
+.fs-13 {
+  font-size: 0.57rem !important;
+}
+.fs-14 {
+  font-size: 0.62rem !important;
+}
+.fs-15 {
+  font-size: 0.66rem !important;
+}
+.fs-16 {
+  font-size: 0.71rem !important;
+}
+.fs-17 {
+  font-size: 0.76rem !important;
+}
+.fs-18 {
+  font-size: 0.8rem !important;
+}
+.fs-19 {
+  font-size: 0.84rem;
+}
+.fs-20 {
+  font-size: 0.88rem !important;
+}
+.fs-21 {
+  font-size: 0.93rem;
+}
+.fs-22 {
+  font-size: 0.98rem;
+}
+.fs-23 {
+  font-size: 1.02rem;
+}
+.fs-24 {
+  font-size: 1.07rem;
+}
+.fs-25 {
+  font-size: 1.115rem;
+}
+.fs-26 {
+  font-size: 1.15rem;
+}
+.fs-27 {
+  font-size: 1.2rem;
+}
+.fs-28 {
+  font-size: 1.24rem;
+}
+.fs-29 {
+  font-size: 1.29rem;
+}
+.fs-30 {
+  font-size: 1.33rem;
+}
+.fs-31 {
+  font-size: 1.38rem;
+}
+.fs-32 {
+  font-size: 1.422rem;
+}
+.fw-300 {
+  font-weight: 300 !important;
+}
+.fw-400 {
+  font-weight: 400 !important;
+}
+.fw-500 {
+  font-weight: 500 !important;
+}
+.fw-600 {
+  font-weight: 600 !important;
+}
+.fw-700 {
+  font-weight: 700 !important;
+}
+
+#loader {
+  display: none;
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  z-index: 100000;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.loader {
+  border: 0.7vw solid transparent;
+  border-radius: 50%;
+  border-top-color: var(--main-color);
+  position: fixed;
+  top: 50%;
+  left: 50%;
+}
+.loader1 {
+  width: 2.5vw;
+  height: 2.5vw;
+  animation: spin 0.4s linear infinite;
+}
+.loader2 {
+  width: 5vw;
+  height: 5vw;
+  animation: spin 0.8s linear infinite;
+}
+.loader3 {
+  width: 7.5vw;
+  height: 7.5vw;
+  animation: spin 1.2s linear infinite;
+}
+.loader4 {
+  width: 10vw;
+  height: 10vw;
+  animation: spin 1.6s linear infinite;
+}
+.loader5 {
+  width: 12.5vw;
+  height: 12.5vw;
+  animation: spin 2s linear infinite;
+}
+@keyframes spin {
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+.text-green {
+  color: var(--text-cust-green);
+}
+
+.bg-grey {
+  background-color: #f1f1f1;
+}
+
+.female-icon {
+  width: 18rem;
+  height: 18rem;
+}
+
+.register-btn {
+  width: 15rem;
+  padding: 0.4rem 2rem !important;
+  font-size: 20px;
+  font-weight: 500;
+  background: #00836c;
+  color: white;
+  border: none;
+}
+
+.login-btn {
+  width: 15rem;
+  padding: 0.4rem 2rem !important;
+  font-size: 20px;
+  font-weight: 500;
+  color: #00836c;
+  background: white;
+  border: 3px solid;
+}
+
+.otp-input {
+  width: 50px;
+  height: 50px;
+  border: none !important;
+  border-radius: 0px !important;
+  border-bottom: solid 1px #c5c5c5 !important;
+  text-align: center;
+  font-size: 32px;
+  background: transparent !important;
+}
+
+.mobile-input {
+  width: 1.2rem;
+  position: absolute;
+  margin: 0.5rem;
+  right: 15px;
+  top: 28px;
+  cursor: pointer;
+}

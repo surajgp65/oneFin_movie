@@ -1,0 +1,80 @@
+<div>
+  <div class="">
+    <div class="mt-3 text-center">
+      <h3 class="p-3 fw-500">Registerd Doctors</h3>
+    </div>
+
+    <div class="mt-4">
+      <div class="container">
+        <div class="main-body" *ngFor="let item of data">
+          <div class="cust-card">
+            <div class="cust-body">
+              <span class="d-flex">
+                <div class="profile">
+                  <img src="assets/images/Oval.png" class="cust-img1" alt="" />
+                  <img
+                    src="assets/images/midas-hofstra-tidSLv-UaNs-unsplash.jpg"
+                    alt=""
+                    class="cust-img2"
+                  />
+                </div>
+                <div class="body-data">
+                  <h3 class="fw-600 mb-0">Dr. {{ item.name | titlecase }}</h3>
+                  <p class="fs-20">MBBS</p>
+                  <div class="time_slot">
+                    <img
+                      src="assets/images/noun_weighing-scale_2532008.png"
+                      alt=""
+                    />
+
+                    <span class="ml-2">Next: 11:00 AM</span>
+                  </div>
+                </div>
+              </span>
+              <div class="fees_section">
+                <span>
+                  <h3 class="fw-500 mb-1">Experience</h3>
+                  <span>{{ item.practicing_since | yearAgo }}</span>
+                </span>
+                <span class="ml-3">
+                  <h3 class="fw-500 mb-1">Fees</h3>
+                  <span
+                    >{{ item.fees.online | currency: "INR":"symbol":"1.0-0" }}
+                    <span class="text-grey"> Online Consult</span></span
+                  ><br />
+                  <span
+                    >{{ item.fees.on_site | currency: "INR":"symbol":"1.0-0" }}
+                    <span class="text-grey"> In-Person Consult</span></span
+                  >
+                </span>
+              </div>
+
+              <div class="book_btn">
+                <button class="book_appoiment">Book Appoiment</button>
+              </div>
+            </div>
+          </div>
+          <div class="delete_btn my-auto">
+            <img
+              src="assets/images/icons8-remove-30.png"
+              (click)="delete(item.id)"
+              class="cursor-pointer"
+              alt=""
+            />
+          </div>
+        </div>
+
+        <div class="mt-3">
+          <!-- <mat-paginator
+            [length]="data?.length"
+            [pageSize]="pageSize"
+            [pageSizeOptions]="pageSizeOptions"
+            (page)="onPageChanged($event)"
+            aria-label="Select page"
+          >
+          </mat-paginator> -->
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

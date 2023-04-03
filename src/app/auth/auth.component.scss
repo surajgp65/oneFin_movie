@@ -1,0 +1,14 @@
+.login-panel {
+  min-height: calc(100vh);
+  border-radius: 2rem 2rem 0rem 0rem;
+}
+
+.otp-panel {
+  text-align: center;
+}
+
+@media only screen and (min-width: 321px) and (max-width: 768px) {
+  .otp-panel {
+    text-align: left;
+  }
+}

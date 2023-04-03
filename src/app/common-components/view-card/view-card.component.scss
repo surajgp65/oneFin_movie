@@ -1,0 +1,92 @@
+.main-body {
+  display: flex;
+  align-items: center;
+}
+
+.cust-card {
+  min-height: 5rem;
+  width: 100%;
+  background: white;
+  border-radius: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.cust-body {
+  display: flex;
+  width: 90%;
+  padding: 0.5rem;
+  position: relative;
+}
+
+.cust-img1 {
+  width: 5rem;
+  position: relative;
+  top: 0;
+  left: 0;
+}
+
+.profile {
+  position: relative;
+  margin-right: 0.5rem;
+}
+
+.cust-img2 {
+  width: 4.7rem;
+  border-radius: 50%;
+  position: absolute;
+  top: 2px;
+  left: 3px;
+}
+
+.time_slot {
+  display: flex;
+  margin: 0rem;
+  background: #bababa;
+  padding: 0.2rem 0.5rem 0.2rem 0.2rem;
+  border-radius: 20px;
+  font-size: 10px;
+  align-items: center;
+
+  img {
+    width: 1.3rem;
+  }
+}
+
+.text-grey {
+  color: #c6c6c6 !important;
+}
+
+.fees_section {
+  display: flex;
+  margin-left: 2rem;
+}
+
+.book_btn {
+  align-self: center;
+  margin-left: 1rem;
+
+  .book_appoiment {
+    background: #499b2f;
+    color: white;
+    border-radius: 20px;
+    padding: 0.3rem 1.6rem;
+    border: none;
+  }
+}
+
+@media only screen and (min-width: 321px) and (max-width: 768px) {
+  .cust-body {
+    flex-direction: column;
+  }
+  .fees_section {
+    margin-left: 0.5rem;
+  }
+  .book_btn {
+    margin: 0.5rem;
+    width: 100%;
+
+    .book_appoiment {
+      width: 100%;
+    }
+  }
+}
