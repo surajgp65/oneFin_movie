@@ -37,8 +37,6 @@ export class DashboardComponent implements OnInit {
           this.loginForm.value
         )
         .subscribe((response: any) => {
-          console.log('Response-->', response);
-
           if (response.is_success == true) {
             localStorage.setItem('token', response.data.token);
           }

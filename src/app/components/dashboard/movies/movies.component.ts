@@ -51,7 +51,6 @@ export class MoviesComponent implements OnInit {
         .request('get', 'https://demo.credy.in/api/v1/maya/movies/', null)
         .subscribe((response: any) => {
           this.movieData = response;
-          console.log('movieData -->', this.movieData);
           this.searchResults = this.movieData.results;
         });
     } catch (error) {}
@@ -63,7 +62,6 @@ export class MoviesComponent implements OnInit {
       this.http.request('get', link, null).subscribe((response: any) => {
         this.movieData = response;
         this.searchResults = this.movieData.results;
-        console.log('movieData -->', this.movieData);
       });
     } catch (error) {}
   }
@@ -74,7 +72,6 @@ export class MoviesComponent implements OnInit {
       this.http.request('get', link, null).subscribe((response: any) => {
         this.movieData = response;
         this.searchResults = this.movieData.results;
-        console.log('movieData -->', this.movieData);
       });
     } catch (error) {}
   }
