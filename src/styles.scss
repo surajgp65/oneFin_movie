@@ -59,6 +59,20 @@ body.dark-mode {
   .modal-header {
     color: black !important;
   }
+
+  h4 {
+    color: white !important;
+  }
+  .card,
+  .modal-body,
+  .modal-header {
+    h2,
+    h4,
+    span,
+    p {
+      color: black !important;
+    }
+  }
 }
 
 body.light-mode {
@@ -249,4 +263,8 @@ body {
   .w-#{$i} {
     width: $i * 1% !important;
   }
+}
+
+.cursor-pointer {
+  cursor: pointer;
 }

@@ -31,9 +31,19 @@ export class DashboardComponent implements OnInit {
     try {
       // this.isDisabled = true;
       this.http
-        .request('post', 'usermodule/login/', this.loginForm.value)
+        .request(
+          'post',
+          'https://demo.credy.in/api/v1/usermodule/login/',
+          this.loginForm.value
+        )
         .subscribe((response: any) => {
           console.log('Response-->', response);
+
+          if (response.is_success == true) {
+            localStorage.setItem('token', response.data.token);
+          }
+          this.router.navigateByUrl('/movie-list');
+
           this.isDisabled = false;
         });
     } catch (error) {}

@@ -22,12 +22,14 @@ export class HttpErrorInterceptorInterceptor implements HttpInterceptor {
   ): Observable<HttpEvent<unknown>> {
     this.totalRequests++;
     $('#loader').show();
-    const reqWithAuth = request.clone({
-      setHeaders: {
-        // Authorization: `Bearer ${localStorage.getItem('token')}`,
-        Authorization: `Bearer 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjo1MzczMSwidXNlcm5hbWUiOiJ0ZXN0dXNlciIsImV4cCI6MTY4MzA5NDc1MiwiZW1haWwiOiIiLCJvcmlnX2lhdCI6MTY4MDUwMjc1Mn0.7RPXVhG3zQmvznxwN4nCaZnIolTchEROkQVTgaTmW1o'`,
-      },
-    });
+    const reqWithAuth = request.clone({});
+
+    if (localStorage.getItem('token') != null) {
+      reqWithAuth.headers.set(
+        'Authorization',
+        `Bearer ${localStorage.getItem('token')}`
+      );
+    }
     return next.handle(reqWithAuth).pipe(
       // retry function for retry api automatically
       // retry(1),
@@ -44,6 +46,8 @@ export class HttpErrorInterceptorInterceptor implements HttpInterceptor {
       // API error handling...
       catchError((error: HttpErrorResponse) => {
         if (error.error) {
+          this.commonService.popUp(error.error.error.message);
+        } else if (error) {
           this.commonService.popUp(error.message);
         }
         return throwError(error);

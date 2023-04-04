@@ -1,0 +1,25 @@
+.card {
+  transition: all 0.2s ease-in-out;
+  &:hover {
+    transform: scale(1.1);
+  }
+
+  .text-truncate-p {
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    max-width: 200px;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+}
+.refresh-button {
+}
+
+@media (max-width: 768px) {
+  .refresh-button {
+    position: absolute;
+    top: 3.5rem;
+    right: 2rem;
+  }
+}
