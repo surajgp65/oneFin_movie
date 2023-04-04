@@ -99,8 +99,6 @@ export class MoviesComponent implements OnInit {
   searchMovie() {
     let movies = this.searchResults;
 
-    console.log('movies -->', movies);
-
     const searchBox = document.getElementById('search') as HTMLInputElement;
 
     const searchBox$ = fromEvent(searchBox, 'input');
