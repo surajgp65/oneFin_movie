@@ -91,6 +91,7 @@ export class MoviesComponent implements OnInit {
       backdrop: 'static',
       ignoreBackdropClick: true,
       class: 'modal-lg modal-dialog-centered',
+      animated: true,
     });
   }
 
@@ -121,11 +122,5 @@ export class MoviesComponent implements OnInit {
         this.movieData.results = this.searchResults;
       }
     });
-  }
-
-  //** Navigate to login component */
-  backToLogin() {
-    localStorage.clear();
-    this.route.navigateByUrl('/');
   }
 }

@@ -1,13 +1,22 @@
-<div class="d-flex justify-content-end mt-2 mr-4">
-  <input
-    id="darkMode"
-    type="checkbox"
-    [checked]="darkMode$ | async"
-    (change)="onToggle()"
-    class="toggle"
-  />
-  <label class="toggle-label" for="darkMode">
-    <img src="assets/images/moon.svg" class="moon" />
-    <img src="assets/images/sun.svg" class="sun" />
-  </label>
+<div class="d-flex justify-content-between mt-2 mr-4">
+  <div>
+    <img
+      src="assets/images/login.svg"
+      class="p-2 bg-white rounded ml-2 rounded-circle cursor-pointer"
+      (click)="backToLogin()"
+    />
+  </div>
+  <div class="">
+    <input
+      id="darkMode"
+      type="checkbox"
+      [checked]="darkMode$ | async"
+      (change)="onToggle()"
+      class="toggle"
+    />
+    <label class="toggle-label" for="darkMode">
+      <img src="assets/images/moon.svg" class="moon" />
+      <img src="assets/images/sun.svg" class="sun" />
+    </label>
+  </div>
 </div>

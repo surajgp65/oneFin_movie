@@ -1,13 +1,7 @@
 <div class="container mb-4">
   <div class="posistion-relative mb-1">
     <div class="row">
-      <div class="col-md-4">
-        <img
-          src="assets/images/login.svg"
-          class="p-2 bg-white rounded ml-2 rounded-circle"
-          (click)="backToLogin()"
-        />
-      </div>
+      <div class="col-md-4"></div>
       <div class="col-md-4">
         <h1 class="text-center font-weight-bold m-0">Movie List</h1>
       </div>
@@ -24,7 +18,7 @@
           />
           <img
             src="assets/images/refresh.svg"
-            class="p-2 bg-white rounded ml-2 border"
+            class="p-2 bg-white rounded ml-2 border cursor-pointer"
             (click)="getMovies()"
           />
         </div>
@@ -38,7 +32,7 @@
     <div class="row">
       <div
         class="col-md-4 col-lg-3 mb-3"
-        *ngFor="let item of movieData['results']"
+        *ngFor="let item of movieData.results"
       >
         <div class="card mx-2" (click)="openModal(item)">
           <div class="d-flex justify-content-center my-3">

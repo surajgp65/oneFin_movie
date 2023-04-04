@@ -53,6 +53,9 @@ body {
 }
 
 body.dark-mode {
+  .loader {
+    border-top-color: gold;
+  }
   background-color: #090c28;
   color: #dfe6e9;
 
@@ -76,6 +79,9 @@ body.dark-mode {
 }
 
 body.light-mode {
+  .loader {
+    border-top-color: #090c28;
+  }
   background-color: white;
   color: #2d3436;
 }
@@ -178,7 +184,7 @@ body.light-mode {
 .loader {
   border: 0.7vw solid transparent;
   border-radius: 50%;
-  border-top-color: var(--main-color);
+  // border-top-color: #090c28;
   position: fixed;
   top: 50%;
   left: 50%;
